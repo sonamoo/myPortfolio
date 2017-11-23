@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 <head>
     <meta charset="UTF-8">
-    <title>Seho Sim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seho Lim</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-</head>
-<body>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Orbitron:700|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
-main
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</head>
+<body ng-app="portfolioApp">
+    <section id="section-header">
+        <div id="header-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="header-contents-wrapper">
+                        <span class="header-contents">About</span>
+                        <span class="header-contents">Projects</span>
+                        <span class="header-contents">Experience</span>
+                        <span class="header-contents">Resume</span>
+                        <span class="header-contents">Contact</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-main" ng-controller="mainController">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col profile-image-buttons">
+
+                        {{profile.firstName}}
+                        {{profile.lastName}}
+
+                </div>
+                <div class="w-1200"></div>
+                <div class="col profile-description">
+
+                        {{profile.firstName}}
+                        {{profile.lastName}}
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">col</div>
+                <div class="col">col</div>
+                <div class="w-100"></div>
+                <div class="col">col</div>
+                <div class="col">col</div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
 
 
 

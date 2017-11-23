@@ -1,0 +1,52 @@
+body{
+    min-height: 700px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#section-header {
+
+}
+
+
+#header-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 30px;
+    font-size: 15px;
+    min-height: 30px;
+    border-bottom: black solid 1px;
+}
+
+#header-contents-wrapper {
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+.header-contents {
+    margin-right: 60px;
+}
+
+
+
+#section-main {
+    width: 1200px;
+    margin: 80px auto;
+}
+
+.profile-wrapper {
+    margin-top: 30px;
+}
+
+.profile-image-buttons {
+    font-size: 20px;
+    min-height: 300px;
+    border: 1px solid black;
+}
+
+
+.profile-description {
+    min-height: 300px;
+    border: 1px solid black;
+}
