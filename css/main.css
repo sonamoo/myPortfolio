@@ -7,14 +7,15 @@ body{
 
 }
 
-
 #header-wrapper {
     position: fixed;
     top: 0;
+    z-index: 10;
     width: 100%;
     padding-top: 30px;
     font-size: 15px;
     min-height: 30px;
+    background-color: white;
     border-bottom: black solid 1px;
 }
 
@@ -27,7 +28,6 @@ body{
 .header-contents {
     margin-right: 60px;
 }
-
 
 
 #section-main {
@@ -49,4 +49,8 @@ body{
 .profile-description {
     min-height: 300px;
     border: 1px solid black;
+}
+
+#profile_img {
+    display: block;
 }

@@ -12,9 +12,6 @@
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="js/main.js"></script>
-
-
-
 </head>
 <body ng-app="portfolioApp">
     <section id="section-header">
@@ -37,20 +34,18 @@
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col profile-image-buttons">
-
-                        {{profile.firstName}}
-                        {{profile.lastName}}
-
+                <div class="col-md-4 profile-image-buttons">
+                    <img src="d.jpg" alt="profile_pic" id="profile_img">
+                    {{profile.firstName}}
+                    {{profile.lastName}}
                 </div>
-                <div class="w-1200"></div>
-                <div class="col profile-description">
-
-                        {{profile.firstName}}
-                        {{profile.lastName}}
-
+                <div class="col-md-8 profile-description">
+                    
+                    {{profile.firstName}}
+                    {{profile.lastName}}
                 </div>
             </div>
+
             <div class="row">
                 <div class="col">col</div>
                 <div class="col">col</div>
@@ -61,11 +56,6 @@
 
         </div>
     </section>
-
-
-
-
-
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
