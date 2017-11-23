@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Seho Lim</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato|Orbitron:700|Source+Sans+Pro" rel="stylesheet">
@@ -31,25 +31,34 @@
     </section>
 
     <section id="section-main" ng-controller="mainController">
-        <div class="container-fluid">
+        <div class="container">
 
             <div class="row">
                 <div class="col-md-4 profile-image-buttons">
                     <img src="d.jpg" alt="profile_pic" id="profile_img">
-                    {{profile.firstName}}
-                    {{profile.lastName}}
+                    <a href="#" style="width: 220px; margin: 0 auto ">
+                        <div class="profile-buttons">
+                            About
+                        </div>
+                    </a>
+
+                    <div class="profile-buttons">
+                        Resume
+                    </div>
+                    <div class="profile-buttons">
+                        Contact
+                    </div>
                 </div>
+                <div class="w-500"></div>
                 <div class="col-md-8 profile-description">
                     <div id="profile-header">
-                        {{profile.firstName}}
-                        {{profile.lastName}}
+                        <h1>{{profile.firstName}} {{profile.lastName}}</h1>
+                        <h4 id="profile-subtitle">Software Engineer / Web Developer</h4>
                     </div>
                     <div id="profile-description-details">
                         <p>Habitat: Chicago</p>
                         <p>Age: Pretty young</p>
-                        <p>University of Illinois at Chicago 4.0</p>
-                        <p>Likes: </p>
-
+                        <p>Likes: Seafood, Coffee, Tea</p>
 
                     </div>
 

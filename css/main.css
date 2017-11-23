@@ -31,8 +31,8 @@ body{
 
 
 #section-main {
-    width: 1200px;
-    margin: 80px auto;
+
+    margin-top: 120px;
 }
 
 .profile-wrapper {
@@ -51,15 +51,32 @@ body{
     border: 1px solid black;
 }
 
+
 #profile_img {
     display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 220px;
+}
+
+.profile-buttons {
+    border: 1px solid black;
+    width: 220px;
+    margin: 0 auto;
+    text-align: center;
+
 }
 
 #profile-header {
     font-size: 40px;
 }
 
+#profile-subtitle {
+    margin-top: -15px;
+    color: darkgray;
+}
+
 #profile-description-details {
-    font-size: 20px;
+    font-size: 18px;
 
 }
