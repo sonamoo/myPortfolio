@@ -54,3 +54,12 @@ body{
 #profile_img {
     display: block;
 }
+
+#profile-header {
+    font-size: 40px;
+}
+
+#profile-description-details {
+    font-size: 20px;
+
+}
