@@ -3,6 +3,16 @@ body{
     font-family: 'Orbitron', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.buffer{
+    height: 150px;
+
+}
+
 #section-header {
 
 }
@@ -64,7 +74,15 @@ body{
     width: 220px;
     margin: 0 auto;
     text-align: center;
+}
 
+.social-buttons-links {
+    padding-right: 15px;
+}
+
+.social-buttons-svg {
+    width: 50px;
+    color: red;
 }
 
 #profile-header {
@@ -79,4 +97,24 @@ body{
 #profile-description-details {
     font-size: 18px;
 
+}
+
+.project-header {
+    font-size: 30px;
+}
+
+.filter-contents {
+
+    font-size: 15px;
+    margin-right: 25px;
+    cursor:pointer;
+}
+
+#project-filter-wrapper {
+    border-bottom: 3px solid black;
+    padding-bottom: 20px;
+}
+
+.active-filter {
+    color: red;
 }

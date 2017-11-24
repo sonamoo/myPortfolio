@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato|Orbitron:700|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-
+    <script src="https://use.fontawesome.com/3c44ce0d55.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -32,22 +32,9 @@
 
     <section id="section-main" ng-controller="mainController">
         <div class="container">
-
             <div class="row">
                 <div class="col-md-4 profile-image-buttons">
                     <img src="d.jpg" alt="profile_pic" id="profile_img">
-                    <a href="#" style="width: 220px; margin: 0 auto ">
-                        <div class="profile-buttons">
-                            About
-                        </div>
-                    </a>
-
-                    <div class="profile-buttons">
-                        Resume
-                    </div>
-                    <div class="profile-buttons">
-                        Contact
-                    </div>
                 </div>
                 <div class="w-500"></div>
                 <div class="col-md-8 profile-description">
@@ -59,18 +46,48 @@
                         <p>Habitat: Chicago</p>
                         <p>Age: Pretty young</p>
                         <p>Likes: Seafood, Coffee, Tea</p>
+                    </div>
+                    <div id="social-buttons">
+
+                        <a class="social-buttons-links" href="https://github.com/sonamoo" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+                        <a class="social-buttons-links" href="https://www.linkedin.com/in/ericlimchicago/" target="_blank"><i class="fa fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                        <a class="social-buttons-links" href="#"><i class="fa fa fa-comment fa-3x" target="_blank" aria-hidden="true"></i></a>
 
                     </div>
+                </div>
+            </div>
+            <div class="row buffer">
 
+            </div>
+            <div class="container" id="project-filter-wrapper">
+                <div class="row">
+                    <div class="col project-header">PROJECTS</div>
+                </div>
+
+                <!---------------------------------Projects Filter-------------------------------->
+                <div class="row">
+                    <div class="col-md-3">Languages & Tools</div>
+                    <div class="col-md-9"><span class="filter-contents" data-ng-repeat="a in languages" ng-click="langFilter(a, $index)" ng-class="{'active-filter': languages[$index].filter}" >{{a.lang}}</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Types</div>
+                    <div class="col-md-9"><span class="filter-contents" data-ng-repeat="t in types" ng-click="filter(t)" ng-style="ftContents">{{t}}</span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Events</div>
+                    <div class="col-md-9"><span class="filter-contents" data-ng-repeat="e in events" ng-click="filter(e)" ng-style="ftContents">{{e}}</span></div>
                 </div>
             </div>
 
+
+            <!----
+                <button ng-model="toggle" ng-class="toggle ? 'red' : ''" ng-click="toggle=!toggle">Change Class</button>
+            ---->
+
+
+            <!---------------------------------Projects ------------------------------------------------>
             <div class="row">
-                <div class="col">col</div>
-                <div class="col">col</div>
-                <div class="w-100"></div>
-                <div class="col">col</div>
-                <div class="col">col</div>
+
             </div>
 
         </div>
