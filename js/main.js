@@ -20,11 +20,18 @@ portfolioApp.controller('mainController',
                 {"lang_id": 6, "lang": "KnockoutJS", "filter": false}
             ];
 
-        $scope.types= ["Web", "DB-API", "Data Analysis"];
-        $scope.events = ["DemonHacks", "WildHacks"];
+        $scope.types= [
+            {"type_id": 0, "type": "Web", "filter": false},
+            {"type_id": 1, "type": "DB-API", "filter": false},
+            {"type_id": 2, "type": "Data Analysis", "filter": false}
+        ];
+        $scope.events = [
+            {"event_id": 0, "event": "DemonHacks", "filter": false},
+            {"event_id": 1, "event": "WildHacks", "filter": false}
+        ];
 
         $scope.filterObj = {
-            "lang" : [],
+            "langs" : [],
             "types": [],
             "events": []
         };
@@ -32,16 +39,63 @@ portfolioApp.controller('mainController',
         $scope.langFilter = function(a, index){
             console.log(index);
             console.log("Clicked " + a);
-            if($scope.filterObj["lang"].indexOf(a) === -1) {
-                $scope.filterObj["lang"].push(a);
+            if($scope.filterObj["langs"].indexOf(a) === -1) {
+                $scope.filterObj["langs"].push(a);
                 $scope.languages[index].filter = true;
             }
             else {
+                var idx = $scope.filterObj["langs"].indexOf(a);
                 $scope.languages[index].filter = false;
-                $scope.filterObj["lang"].splice(index, 1);
+                $scope.filterObj["langs"].splice(idx, 1);
             }
-
-            console.log($scope.filterObj.lang);
+            console.log("-----------------filter-------------");
+            console.log($scope.filterObj["langs"]);
+            console.log($scope.filterObj["types"]);
+            console.log($scope.filterObj["events"]);
 
         };
+
+
+        $scope.typeFilter = function(t, index) {
+            console.log(index);
+            console.log("Clicked " + t);
+
+            if($scope.filterObj["types"].indexOf(t) === -1) {
+                $scope.filterObj["types"].push(t);
+                $scope.types[index].filter = true;
+            }
+            else {
+                var idx = $scope.filterObj["types"].indexOf(t);
+                $scope.types[index].filter = false;
+                $scope.filterObj["types"].splice(idx, 1);
+            }
+            console.log("-----------------filter-------------");
+            console.log($scope.filterObj["langs"]);
+            console.log($scope.filterObj["types"]);
+            console.log($scope.filterObj["events"]);
+
+        };
+
+
+        $scope.eventFilter = function(e, index) {
+            console.log(index);
+            console.log("Clicked " + e);
+
+            if($scope.filterObj["events"].indexOf(e) === -1) {
+                $scope.filterObj["events"].push(e);
+                $scope.events[index].filter = true;
+            }
+            else {
+                var idx = $scope.filterObj["events"].indexOf(e);
+                $scope.events[index].filter = false;
+                $scope.filterObj["events"].splice(idx, 1);
+            }
+            console.log("-----------------filter-------------");
+            console.log($scope.filterObj["langs"]);
+            console.log($scope.filterObj["types"]);
+            console.log($scope.filterObj["events"]);
+        };
+
+
+
     });
