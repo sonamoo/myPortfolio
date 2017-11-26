@@ -56,28 +56,30 @@
                     </div>
                 </div>
             </div>
-            <div class="row buffer">
+            <div class="row buffer"></div>
+        </div>
 
+        <div class="container" id="project-filter-wrapper">
+            <div class="row">
+                <div class="col project-header">PROJECTS</div>
             </div>
-            <div class="container" id="project-filter-wrapper">
-                <div class="row">
-                    <div class="col project-header">PROJECTS</div>
-                </div>
 
-                <!---------------------------------Projects Filter-------------------------------->
-                <div class="row">
-                    <div class="col-md-3">Languages & Tools</div>
-                    <div class="col-md-9"><span class="filter-contents" data-ng-repeat="a in languages" ng-click="langFilter(a.lang, $index)" ng-class="{'active-filter': languages[$index].filter}" >{{a.lang}}</span></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">Types</div>
-                    <div class="col-md-9"><span class="filter-contents" data-ng-repeat="t in types" ng-click="typeFilter(t.type, $index)" ng-class="{'active-filter': types[$index].filter}">{{t.type}}</span></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">Events</div>
-                    <div class="col-md-9"><span class="filter-contents" data-ng-repeat="e in events" ng-click="eventFilter(e.event, $index)" ng-class="{'active-filter': events[$index].filter}">{{e.event}}</span></div>
-                </div>
+            <!---------------------------------Projects Filter-------------------------------->
+            <div class="row">
+                <div class="col-md-3">Languages & Tools</div>
+                <div class="col-md-9"><span class="filter-contents" data-ng-repeat="a in languages" ng-click="langFilter(a.lang, $index)" ng-class="{'active-filter': languages[$index].filter}" >{{a.lang}}</span></div>
             </div>
+            <div class="row">
+                <div class="col-md-3">Types</div>
+                <div class="col-md-9"><span class="filter-contents" data-ng-repeat="t in types" ng-click="typeFilter(t.type, $index)" ng-class="{'active-filter': types[$index].filter}">{{t.type}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">Events</div>
+                <div class="col-md-9"><span class="filter-contents" data-ng-repeat="e in events" ng-click="eventFilter(e.event, $index)" ng-class="{'active-filter': events[$index].filter}">{{e.event}}</span></div>
+            </div>
+
+            <hr>
+        </div>
 
 
             <!----
@@ -86,10 +88,22 @@
 
 
             <!---------------------------------Projects ------------------------------------------------>
+        <div class="container">
             <div class="row">
 
-            </div>
 
+                <div class="col-md-4 col-sm-12" ng-repeat="p in projects">
+                    <div class="project-contents">
+                        <div class="proj-img">
+
+                        </div>
+                        <div class="proj-desc">
+                            {{p.name}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 

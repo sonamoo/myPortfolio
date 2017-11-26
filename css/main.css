@@ -111,10 +111,27 @@ a {
 }
 
 #project-filter-wrapper {
-    border-bottom: 3px solid black;
+
     padding-bottom: 20px;
 }
 
 .active-filter {
     color: red;
+}
+
+.project-contents {
+    border: 1px black solid;
+    min-height: 350px;
+}
+
+.proj-img {
+    min-width: 200px;
+    border: 1px solid black;
+    min-height: 200px;
+}
+
+.proj-desc {
+    min-height: 140px;
+    border: 1px solid black;
+
 }
