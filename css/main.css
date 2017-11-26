@@ -121,17 +121,31 @@ a {
 
 .project-contents {
     border: 1px black solid;
-    min-height: 350px;
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+
+.proj-img-wrapper {
+    min-width: 200px;
+    border: 1px solid black;
+    min-height: 250px;
+
 }
 
 .proj-img {
-    min-width: 200px;
+    width: 100%;
+}
+
+.proj-desc-wrapper {
+    min-height: 140px;
     border: 1px solid black;
-    min-height: 200px;
+}
+
+.proj-header {
+    padding: 10px;
 }
 
 .proj-desc {
-    min-height: 140px;
-    border: 1px solid black;
-
+    padding: 10px;
+    font-family: sans-serif;
 }

@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 profile-image-buttons">
-                    <img src="d.jpg" alt="profile_pic" id="profile_img">
+                    <img src="src/d.jpg" alt="profile_pic" id="profile_img">
                 </div>
                 <div class="w-500"></div>
                 <div class="col-md-8 profile-description">
@@ -94,11 +94,14 @@
 
                 <div class="col-md-4 col-sm-12" ng-repeat="p in projects">
                     <div class="project-contents">
-                        <div class="proj-img">
-
+                        <div class="proj-img-wrapper">
+                            <img class="proj-img" ng-src="{{p.img}}" alt="project_img" >
                         </div>
-                        <div class="proj-desc">
-                            {{p.name}}
+                        <div class="proj-desc-wrapper">
+                            <h5 ng-show="p.event[0]">36hr Hackathon</h5>
+                            <h4 class="proj-header">{{p.name}}</h4>
+
+                            <p class="proj-desc">{{p.description}}</p>
                         </div>
                     </div>
                 </div>
