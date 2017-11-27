@@ -38,7 +38,11 @@ portfolioApp.controller('mainController',
                 "description": "This web app won 3rd coolest prize at Demonhacks from Capital One. I created a server with NodeJS and worked on some Javascript that work with api calls",
                 "img": "src/pickavibe.png",
                 "tech": ["Javascript", "AngularJS","NodeJS", "Web"],
-                "event": ["DemonHacks"]
+                "event": ["DemonHacks"],
+                "links": {
+                    "github": "https://github.com/sonamoo/pic-a-vibe",
+                    "proj": "https://obscure-falls-61182.herokuapp.com/"
+                }
             },
 
             {
@@ -46,7 +50,11 @@ portfolioApp.controller('mainController',
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/collegecookie.png",
                 "tech": ["Python", "Flask", "Web"],
-                "event": ["WildHacks"]
+                "event": ["WildHacks"],
+                "links": {
+                    "github": "https://github.com/sonamoo/don-tEatLunchAlone",
+                    "proj": "https://devpost.com/software/college-cookie"
+                }
             },
 
             {
@@ -54,7 +62,11 @@ portfolioApp.controller('mainController',
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/artsyplacesfinder.png",
                 "tech": ["KnockoutJS", "Web"],
-                "event": []
+                "event": [],
+                "links": {
+                    "github": "https://github.com/sonamoo/artsyPlacesFinder",
+                    "proj": "https://sonamoo.github.io/artsyPlacesFinder/"
+                }
             },
 
             {
@@ -62,7 +74,11 @@ portfolioApp.controller('mainController',
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/collectiveflashcard.png",
                 "tech": ["Javascript", "Python","Flask", "Web"],
-                "event": []
+                "event": [],
+                "links": {
+                    "github": "https://github.com/sonamoo/FlashcardAppUbuntu",
+                    "proj": "http://ec2-13-59-188-21.us-east-2.compute.amazonaws.com/"
+                }
             },
 
             {
@@ -70,7 +86,11 @@ portfolioApp.controller('mainController',
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/loganalysis.png",
                 "tech": ["Python", "DB-API", "Data-Analysis"],
-                "event": []
+                "event": [],
+                "links": {
+                    "github": "https://github.com/sonamoo/pic-a-vibe",
+                    "proj": "https://obscure-falls-61182.herokuapp.com/"
+                }
             },
 
             {
@@ -78,7 +98,11 @@ portfolioApp.controller('mainController',
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/aresautomation.png",
                 "tech": ["Web"],
-                "event": []
+                "event": [],
+                "links": {
+                    "github": "https://github.com/sonamoo/pic-a-vibe",
+                    "proj": "https://obscure-falls-61182.herokuapp.com/"
+                }
             }
         ];
 
