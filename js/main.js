@@ -8,7 +8,6 @@ portfolioApp.controller('mainController',
             "firstName" : "Seho",
             "lastName" : "Lim"
         };
-
         const langs = [];
         $scope.languages =
             [
@@ -19,7 +18,6 @@ portfolioApp.controller('mainController',
                 {"lang_id": 5, "lang": "NodeJS", "filter": false},
                 {"lang_id": 6, "lang": "KnockoutJS", "filter": false}
             ];
-
         $scope.types= [
             {"type_id": 0, "type": "Web", "filter": false},
             {"type_id": 1, "type": "DB-API", "filter": false},
@@ -29,64 +27,60 @@ portfolioApp.controller('mainController',
             {"event_id": 0, "event": "DemonHacks", "filter": false},
             {"event_id": 1, "event": "WildHacks", "filter": false}
         ];
-
         $scope.filterObj = {
             "langs" : [],
             "types": [],
             "events": []
         };
-
         $scope.projects = [
             {
                 "name": "Pic-A-Vibe",
-                "description": "This web app won 3rd coolest prize at Demonhacks from Capital One.",
+                "description": "This web app won 3rd coolest prize at Demonhacks from Capital One. I created a server with NodeJS and worked on some Javascript that work with api calls",
                 "img": "src/pickavibe.png",
-                "tech": ["Javascript", "AngularJS","NodeJS"],
+                "tech": ["Javascript", "AngularJS","NodeJS", "Web"],
                 "event": ["DemonHacks"]
             },
 
             {
                 "name": "College Cookie",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/collegecookie.png",
-                "tech": ["Python", "Flask","NodeJS"],
+                "tech": ["Python", "Flask", "Web"],
                 "event": ["WildHacks"]
             },
 
             {
                 "name": "Artsy Places Finder",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/artsyplacesfinder.png",
-                "tech": ["Javascript", "AngularJS","NodeJS"],
+                "tech": ["KnockoutJS", "Web"],
                 "event": []
             },
 
             {
                 "name": "Collective Flashcard",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/collectiveflashcard.png",
-                "tech": ["Javascript", "AngularJS","NodeJS"],
+                "tech": ["Javascript", "Python","Flask", "Web"],
                 "event": []
             },
 
             {
                 "name": "Log Analysis",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/loganalysis.png",
-                "tech": ["Javascript", "AngularJS","NodeJS"],
+                "tech": ["Python", "DB-API", "Data-Analysis"],
                 "event": []
             },
 
             {
                 "name": "Ares Automation",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/aresautomation.png",
-                "tech": ["Javascript", "AngularJS","NodeJS"],
+                "tech": ["Web"],
                 "event": []
             }
         ];
-
-
 
         $scope.langFilter = function(a, index){
             console.log(index);
@@ -127,7 +121,6 @@ portfolioApp.controller('mainController',
             console.log($scope.filterObj["events"]);
 
         };
-
 
         $scope.eventFilter = function(e, index) {
             console.log(index);

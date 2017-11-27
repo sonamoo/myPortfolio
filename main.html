@@ -29,7 +29,6 @@
             </div>
         </div>
     </section>
-
     <section id="section-main" ng-controller="mainController">
         <div class="container">
             <div class="row">
@@ -48,11 +47,9 @@
                         <p>Likes: Seafood, Coffee, Tea</p>
                     </div>
                     <div id="social-buttons">
-
                         <a class="social-buttons-links" href="https://github.com/sonamoo" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
                         <a class="social-buttons-links" href="https://www.linkedin.com/in/ericlimchicago/" target="_blank"><i class="fa fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
                         <a class="social-buttons-links" href="#"><i class="fa fa fa-comment fa-3x" target="_blank" aria-hidden="true"></i></a>
-
                     </div>
                 </div>
             </div>
@@ -80,18 +77,8 @@
 
             <hr>
         </div>
-
-
-            <!----
-                <button ng-model="toggle" ng-class="toggle ? 'red' : ''" ng-click="toggle=!toggle">Change Class</button>
-            ---->
-
-
-            <!---------------------------------Projects ------------------------------------------------>
         <div class="container">
             <div class="row">
-
-
                 <div class="col-md-4 col-sm-12" ng-repeat="p in projects">
                     <div class="project-contents">
                         <div class="proj-img-wrapper">
@@ -100,7 +87,7 @@
                         <div class="proj-desc-wrapper">
                             <h5 ng-show="p.event[0]">36hr Hackathon</h5>
                             <h4 class="proj-header">{{p.name}}</h4>
-
+                            <span ng-repeat="t in p.tech" class="proj-techs">{{t}}</span>
                             <p class="proj-desc">{{p.description}}</p>
                         </div>
                     </div>

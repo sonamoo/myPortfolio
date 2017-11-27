@@ -57,7 +57,7 @@ a {
 
 
 .profile-description {
-    min-height: 300px;
+    min-height: 350px;
     border: 1px solid black;
 }
 
@@ -129,7 +129,6 @@ a {
     min-width: 200px;
     border: 1px solid black;
     min-height: 250px;
-
 }
 
 .proj-img {
@@ -137,15 +136,24 @@ a {
 }
 
 .proj-desc-wrapper {
-    min-height: 140px;
+    min-height: 300px;
     border: 1px solid black;
+    font-family: sans-serif;
+    padding: 10px;
 }
 
 .proj-header {
-    padding: 10px;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: -3px;
 }
 
 .proj-desc {
-    padding: 10px;
+    padding-top: 5px;
     font-family: sans-serif;
+
+}
+
+.proj-techs {
+    font-size: 15px;
+    margin-right: 10px;
 }
