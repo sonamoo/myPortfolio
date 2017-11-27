@@ -39,7 +39,7 @@ portfolioApp.controller('mainController',
         $scope.projects = [
             {
                 "name": "Pic-A-Vibe",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "description": "This web app won 3rd coolest prize at Demonhacks from Capital One.",
                 "img": "src/pickavibe.png",
                 "tech": ["Javascript", "AngularJS","NodeJS"],
                 "event": ["DemonHacks"]
@@ -49,7 +49,7 @@ portfolioApp.controller('mainController',
                 "name": "College Cookie",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 "img": "src/collegecookie.png",
-                "tech": ["Javascript", "AngularJS","NodeJS"],
+                "tech": ["Python", "Flask","NodeJS"],
                 "event": ["WildHacks"]
             },
 
@@ -81,13 +81,6 @@ portfolioApp.controller('mainController',
                 "name": "Ares Automation",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 "img": "src/aresautomation.png",
-                "tech": ["Javascript", "AngularJS","NodeJS"],
-                "event": []
-            },
-
-            {
-                "name": "College Cookie",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 "tech": ["Javascript", "AngularJS","NodeJS"],
                 "event": []
             }
