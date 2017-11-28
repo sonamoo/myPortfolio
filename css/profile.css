@@ -32,8 +32,37 @@ body {
     padding-right: 15px;
 }
 
+.social-buttons-links:hover {
+    color: #3d9970;
+}
+
 .social-buttons-svg {
     width: 50px;
     color: red;
 }
 
+.a-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 20px;
+    top: 50%;
+    margin: 5px auto;
+    font: bold 11px Arial;
+
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    padding: 2px 6px 2px 6px;
+    border: 1px solid white;
+}
+
+.a-button:hover {
+    background-color: #3d9970;
+}
+
+#profile-buttons-wrapper {
+    padding-top: 15px;
+
+}
