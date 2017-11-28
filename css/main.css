@@ -61,14 +61,6 @@ a {
     border: 1px solid black;
 }
 
-
-#profile_img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    width: 220px;
-}
-
 .profile-buttons {
     border: 1px solid black;
     width: 220px;
@@ -76,14 +68,7 @@ a {
     text-align: center;
 }
 
-.social-buttons-links {
-    padding-right: 15px;
-}
 
-.social-buttons-svg {
-    width: 50px;
-    color: red;
-}
 
 #profile-header {
     font-size: 40px;

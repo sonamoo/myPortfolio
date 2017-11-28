@@ -1,0 +1,39 @@
+body {
+    background-color: #070730;
+    padding-top: 150px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#profile_img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 180px;
+}
+
+#profile-hello {
+    font-family: 'Raleway', sans-serif;
+}
+
+#profile-title {
+
+}
+
+#profile-subtitle {
+    margin-top: -17px;
+
+}
+
+
+.social-buttons-links {
+    padding-right: 15px;
+}
+
+.social-buttons-svg {
+    width: 50px;
+    color: red;
+}
+
