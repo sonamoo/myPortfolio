@@ -12,6 +12,7 @@ body {
     margin: 0 auto;
     border-radius: 50%;
     width: 180px;
+    border: 3px solid white;
 }
 
 #profile-hello {
@@ -19,16 +20,19 @@ body {
 }
 
 #profile-title {
-
 }
 
 #profile-subtitle {
     margin-top: -17px;
-
 }
 
+#social-buttons-wrapper {
+    padding-top: 10px;
+}
 
 .social-buttons-links {
+
+    color: white;
     padding-right: 15px;
 }
 
@@ -46,11 +50,10 @@ body {
     align-items: center;
     justify-content: center;
     width: 160px;
-    height: 20px;
+    height: 30px;
     top: 50%;
     margin: 5px auto;
-    font: bold 11px Arial;
-
+    font: bold 13px Arial;
     text-decoration: none;
     background-color: transparent;
     color: white;
@@ -64,5 +67,4 @@ body {
 
 #profile-buttons-wrapper {
     padding-top: 15px;
-
 }
