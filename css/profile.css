@@ -17,6 +17,8 @@ body {
 
 #profile-hello {
     font-family: 'Raleway', sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 #profile-title {
@@ -49,7 +51,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
+    width: 200px;
     height: 30px;
     top: 50%;
     margin: 5px auto;
@@ -63,6 +65,7 @@ body {
 
 .a-button:hover {
     background-color: #3d9970;
+    color: #070730;
 }
 
 #profile-buttons-wrapper {
