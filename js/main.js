@@ -167,6 +167,19 @@ portfolioApp.controller('mainController',
 
         $scope.is_hackathon = function(p) {
             console.log(p);
-        }
+        };
+
+        $scope.mouseOverOnProj = false;
+        $scope.see_project = function(p) {
+            console.log(p);
+            $scope.mouseOverOnProj = true;
+
+        };
 
     });
+
+
+var see_project = function() {
+    console.log();
+    console.log("sdf");
+};
