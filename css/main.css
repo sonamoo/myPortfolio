@@ -92,7 +92,10 @@ a {
 
     font-size: 15px;
     margin-right: 25px;
-    cursor:pointer;
+    /*
+    This is for the later use.
+     cursor:pointer;
+     */
 }
 
 #project-filter-wrapper {

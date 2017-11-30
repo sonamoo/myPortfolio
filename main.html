@@ -38,39 +38,31 @@
             <!---------------------------------Projects Filter-------------------------------->
             <div class="row">
                 <div class="col-md-3">Languages & Tools</div>
-                <div class="col-md-9"><span class="filter-contents" data-ng-repeat="a in languages" ng-click="langFilter(a.lang, $index)" ng-class="{'active-filter': languages[$index].filter}" >{{a.lang}}</span></div>
+                <div class="col-md-9"><span class="filter-contents" data-ng-repeat="a in languages" ng-click="langFilter(a.lang, $index); searchProjectsByKeywords()" ng-class="{'active-filter': languages[$index].filter}" >{{a.lang}}</span></div>
             </div>
             <div class="row">
                 <div class="col-md-3">Types</div>
-                <div class="col-md-9"><span class="filter-contents" data-ng-repeat="t in types" ng-click="typeFilter(t.type, $index)" ng-class="{'active-filter': types[$index].filter}">{{t.type}}</span></div>
+                <div class="col-md-9"><span class="filter-contents" data-ng-repeat="t in types" ng-click="typeFilter(t.type, $index); searchProjectsByKeywords()" ng-class="{'active-filter': types[$index].filter}">{{t.type}}</span></div>
             </div>
             <div class="row">
                 <div class="col-md-3">Events</div>
-                <div class="col-md-9"><span class="filter-contents" data-ng-repeat="e in events" ng-click="eventFilter(e.event, $index)" ng-class="{'active-filter': events[$index].filter}">{{e.event}}</span></div>
+                <div class="col-md-9"><span class="filter-contents" data-ng-repeat="e in events" ng-click="eventFilter(e.event, $index); searchProjectsByKeywords()" ng-class="{'active-filter': events[$index].filter}">{{e.event}}</span></div>
             </div>
-
             <hr>
         </div>
-
-        <div class="container" >
+        <div class="container">
             <div class="row" ng-init="selection = {selectedProj: null}">
-
-                <div class="col-md-4 col-sm-12" ng-repeat="p in projects" ng-mouseover="see_project(p)">
-
+                <div class="col-md-4 col-sm-12" ng-repeat="p in filteredProjects.filtered">
                     <a class="proj-link-tag" href="#">
                     <div class="project-contents" ng-click="selection.selectedProj= p" ng-class="{selected: selection.selectedProj == p}">
-
                         <div class="proj-img-wrapper">
-
                             <img class="proj-img" ng-src="{{p.img}}" alt="project_img" >
                         </div>
                         <div class="proj-desc-wrapper">
-
                             <h5 ng-show="p.event[0]">36hr Hackathon</h5>
                             <h4 class="proj-header">{{p.name}}</h4>
                             <span ng-repeat="t in p.tech" class="proj-techs">{{t}}</span>
                             <p class="proj-desc">{{p.description}}</p>
-
                         </div>
                     </div>
                     </a>
@@ -79,8 +71,6 @@
             </div>
         </div>
     </section>
-
-
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>

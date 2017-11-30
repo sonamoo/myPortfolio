@@ -32,8 +32,9 @@ portfolioApp.controller('mainController',
             "types": [],
             "events": []
         };
-        $scope.projects = [
+        const projects = [
             {
+                "id":0,
                 "name": "Pic-A-Vibe",
                 "description": "This web app won 3rd coolest prize at Demonhacks from Capital One. I created a server with NodeJS and worked on some Javascript that work with api calls",
                 "img": "src/pickavibe.png",
@@ -46,6 +47,7 @@ portfolioApp.controller('mainController',
             },
 
             {
+                "id":1,
                 "name": "College Cookie",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/collegecookie.png",
@@ -58,10 +60,11 @@ portfolioApp.controller('mainController',
             },
 
             {
+                "id":2,
                 "name": "Artsy Places Finder",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/artsyplacesfinder.png",
-                "tech": ["KnockoutJS", "Web"],
+                "tech": ["Javascript","KnockoutJS", "Web"],
                 "event": [],
                 "links": {
                     "github": "https://github.com/sonamoo/artsyPlacesFinder",
@@ -70,6 +73,7 @@ portfolioApp.controller('mainController',
             },
 
             {
+                "id":3,
                 "name": "Collective Flashcard",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/collectiveflashcard.png",
@@ -82,6 +86,7 @@ portfolioApp.controller('mainController',
             },
 
             {
+                "id":4,
                 "name": "Log Analysis",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/loganalysis.png",
@@ -94,6 +99,7 @@ portfolioApp.controller('mainController',
             },
 
             {
+                "id":5,
                 "name": "Ares Automation",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 "img": "src/aresautomation.png",
@@ -173,11 +179,74 @@ portfolioApp.controller('mainController',
         $scope.see_project = function(p) {
             console.log(p);
             $scope.mouseOverOnProj = true;
-
         };
 
-    });
+        $scope.filteredProjects = {
+            "wholeProjects": projects,
+            "filtered": [],
+            "isUserFiltering": true
+        };
 
+        var pushProject = function(p) {
+            var lenOfFilteredProjects = $scope.filteredProjects.filtered.length;
+            for(var i=0; i < lenOfFilteredProjects; i++) {
+                if(p.id === $scope.filteredProjects.filtered[i].id) {
+                    console.log("There is already the same project");
+                    return;
+                }
+                else {
+                    $scope.filteredProjects.filtered.push(projects[i]);
+                    return;
+                }
+            }
+        };
+
+        $scope.searchProjectsByKeywords = function() {
+            if ($scope.filteredProjects.isUserFiltering === false) {
+                return 0;
+            }
+            var numOfProjects = projects.length;
+            var numOfTechs = 0;
+            for(var i = 0; i < numOfProjects; i++) {
+                numOfTechs = projects[i].tech.length;
+                var project = projects[i];
+                for(var j = 0; j < numOfTechs; j++) {
+
+                    var numOfLangs = $scope.filterObj.langs.length;
+                    var numOfTypes = $scope.filterObj.types.length;
+                    var numOfEvents = $scope.filterObj.events.length;
+                    //loop through langs
+                    for(var l = 0; l < numOfLangs; l++) {
+                        if(project.tech[j] === $scope.filterObj.langs[l]) {
+                            pushProject(projects[i]);
+                            return;
+                        }
+                        console.log($scope.filterObj.langs[l]);
+                    }
+                    //loop through types
+                    for(var t = 0; t < numOfTypes; t++) {
+                        if(project.tech[j] === $scope.filterObj.types[t]) {
+                            pushProject(projects[i]);
+                            return;
+                        }
+                        console.log($scope.filterObj.types[t]);
+                    }
+                    //loop through events
+                    for(var e = 0; e < numOfEvents; e++) {
+                        if(project.tech[j] === $scope.filterObj.events[e]) {
+                            pushProject(projects[i]);
+                            return;
+                        }
+                        console.log($scope.filterObj.events[e]);
+                    }
+                }
+
+            }
+
+
+        }
+
+    });
 
 var see_project = function() {
     console.log();
