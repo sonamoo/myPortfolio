@@ -162,7 +162,8 @@ a {
 .proj-link-tag:hover {
     text-decoration: none;
     color: black;
-    box-shadow: 0 4px 8px 0 rgba(255, 38, 70, 0.2);
+    box-shadow: 5px 5px 25px 0px rgba(255, 38, 70, 0.2);
+
 
 }
 .proj-link-tag:visited {

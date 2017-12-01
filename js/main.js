@@ -1,5 +1,5 @@
 'use strict';
-var portfolioApp = angular.module('portfolioApp', []);
+var portfolioApp = angular.module('portfolioApp', ['ui.bootstrap']);
 
 portfolioApp.controller('mainController',
     function mainController($scope) {
@@ -36,7 +36,7 @@ portfolioApp.controller('mainController',
             {
                 "id":0,
                 "name": "Pic-A-Vibe",
-                "description": "This web app won 3rd coolest prize at Demonhacks from Capital One. I created a server with NodeJS and worked on some Javascript that work with api calls",
+                "description": "This web app won 3rd coolest prize at Demonhacks from Capital One. This app let users search image and provide sounds of the objects that are present in the photo. I created the server with NodeJS/Express and worked on some Javascript that work with api calls",
                 "img": "src/pickavibe.png",
                 "tech": ["Javascript", "AngularJS","NodeJS", "Web"],
                 "event": ["DemonHacks"],
