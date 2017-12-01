@@ -211,13 +211,10 @@ portfolioApp.controller('mainController',
                     console.log("There is already the same project");
                     return;
                 }
-                else {
-                    console.log("Push the project");
-                    $scope.filteredProjects.filtered.push(p);
-                    //$scope.$apply();
-                    return;
-                }
+
             }
+            console.log("Push the project");
+            $scope.filteredProjects.filtered.push(p);
         };
 
         $scope.searchProjectsByKeywords = function() {
@@ -241,7 +238,6 @@ portfolioApp.controller('mainController',
                     for(var l = 0; l < numOfLangs; l++) {
                         if(project.tech[j] === $scope.filterObj.langs[l]) {
                             pushProject(projects[i]);
-
                         }
                         console.log($scope.filterObj.langs[l]);
                     }
@@ -249,7 +245,6 @@ portfolioApp.controller('mainController',
                     for(var t = 0; t < numOfTypes; t++) {
                         if(project.tech[j] === $scope.filterObj.types[t]) {
                             pushProject(projects[i]);
-
                         }
                         console.log($scope.filterObj.types[t]);
                     }
@@ -257,11 +252,16 @@ portfolioApp.controller('mainController',
                     for(var e = 0; e < numOfEvents; e++) {
                         if(project.tech[j] === $scope.filterObj.events[e]) {
                             pushProject(projects[i]);
-
                         }
                         console.log($scope.filterObj.events[e]);
                     }
                 }
+            }
+
+            console.log($scope.filteredProjects.filtered.length);
+            if ($scope.filteredProjects.filtered.length === 0) {
+                $scope.filteredProjects.filtered = projects;
+                console.log("sdfsdfasdf")
             }
         }
     });
