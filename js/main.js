@@ -182,29 +182,51 @@ portfolioApp.controller('mainController',
         };
 
         $scope.filteredProjects = {
-            "wholeProjects": projects,
             "filtered": [],
             "isUserFiltering": true
         };
 
+        $scope.filteredProjects.filtered = projects;
+
+        $scope.toggleFiltering = function() {
+
+            if ($scope.filteredProjects.isUserFiltering === true) {
+                $scope.filteredProjects.isUserFiltering = false;
+            } else {
+                $scope.filteredProjects.isUserFiltering = true;
+            }
+        };
+
         var pushProject = function(p) {
+            console.log(p);
             var lenOfFilteredProjects = $scope.filteredProjects.filtered.length;
+            if (lenOfFilteredProjects === 0) {
+                console.log("Push the project");
+                $scope.filteredProjects.filtered.push(p);
+                //$scope.$apply();
+                return;
+            }
             for(var i=0; i < lenOfFilteredProjects; i++) {
-                if(p.id === $scope.filteredProjects.filtered[i].id) {
+                if(p["id"] === $scope.filteredProjects.filtered[i].id) {
                     console.log("There is already the same project");
                     return;
                 }
                 else {
-                    $scope.filteredProjects.filtered.push(projects[i]);
+                    console.log("Push the project");
+                    $scope.filteredProjects.filtered.push(p);
+                    //$scope.$apply();
                     return;
                 }
             }
         };
 
         $scope.searchProjectsByKeywords = function() {
+            console.log("searching start");
             if ($scope.filteredProjects.isUserFiltering === false) {
                 return 0;
             }
+            // empty the project.
+            $scope.filteredProjects.filtered = [];
             var numOfProjects = projects.length;
             var numOfTechs = 0;
             for(var i = 0; i < numOfProjects; i++) {
@@ -219,7 +241,7 @@ portfolioApp.controller('mainController',
                     for(var l = 0; l < numOfLangs; l++) {
                         if(project.tech[j] === $scope.filterObj.langs[l]) {
                             pushProject(projects[i]);
-                            return;
+
                         }
                         console.log($scope.filterObj.langs[l]);
                     }
@@ -227,7 +249,7 @@ portfolioApp.controller('mainController',
                     for(var t = 0; t < numOfTypes; t++) {
                         if(project.tech[j] === $scope.filterObj.types[t]) {
                             pushProject(projects[i]);
-                            return;
+
                         }
                         console.log($scope.filterObj.types[t]);
                     }
@@ -235,17 +257,13 @@ portfolioApp.controller('mainController',
                     for(var e = 0; e < numOfEvents; e++) {
                         if(project.tech[j] === $scope.filterObj.events[e]) {
                             pushProject(projects[i]);
-                            return;
+
                         }
                         console.log($scope.filterObj.events[e]);
                     }
                 }
-
             }
-
-
         }
-
     });
 
 var see_project = function() {
