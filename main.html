@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/ui-bootstrap-csp.css">
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/ui-bootstrap-tpls.js"></script>
+
     <script src="js/ui-bootstrap.js"></script>
     <script src="js/angular-touch.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
@@ -57,7 +57,7 @@
         <div class="container">
             <div class="row" ng-init="selection = {selectedProj: null}">
                 <div class="col-md-4 col-sm-12" ng-repeat="p in filteredProjects.filtered track by $index">
-                    <a class="proj-link-tag" href="#">
+                    <a class="proj-link-tag" href="#" ng-click="projectClickedHandler()">
                     <div class="project-contents" ng-click="selection.selectedProj= p" ng-class="{selected: selection.selectedProj == p}">
                         <div class="proj-img-wrapper">
                             <img class="proj-img" ng-src="{{p.img}}" alt="project_img" >

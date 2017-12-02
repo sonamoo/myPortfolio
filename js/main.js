@@ -1,8 +1,8 @@
 'use strict';
-var portfolioApp = angular.module('portfolioApp', ['ui.bootstrap']);
+var portfolioApp = angular.module('portfolioApp', ['ui.bootstrap', 'ngAnimate']);
 
 portfolioApp.controller('mainController',
-    function mainController($scope) {
+    function mainController($scope, $uibModal, $document) {
 
         $scope.profile = {
             "firstName" : "Seho",
@@ -263,7 +263,26 @@ portfolioApp.controller('mainController',
                 $scope.filteredProjects.filtered = projects;
                 console.log("sdfsdfasdf")
             }
+        };
+
+        $scope.projectClickedHandler = function() {
+            var modalInstance = $uibModal.open(
+                {
+                    animation: true,
+                    ariaLabelledBy: 'modal-title',
+                    ariaDescribedBy: 'modal-body',
+                    templateUrl: 'project-modal.html',
+                    controller: 'mainController',
+                    size: 'md'
+
+                }).result.catch(function(res) {
+                if(!(res === 'cancel' || res === 'escape key press' || res === 'backdrop click')) {
+                    throw res;
+                }
+            });
         }
+
+
     });
 
 var see_project = function() {
