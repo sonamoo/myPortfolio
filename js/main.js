@@ -268,19 +268,20 @@ portfolioApp.controller('mainController',
         $scope.projectClickedHandler = function() {
             var modalInstance = $uibModal.open(
                 {
-                    animation: true,
-                    ariaLabelledBy: 'modal-title',
-                    ariaDescribedBy: 'modal-body',
-                    templateUrl: 'project-modal.html',
+                    templateUrl: './project-modal.html',
                     controller: 'mainController',
                     size: 'md'
+                });
 
-                }).result.catch(function(res) {
-                if(!(res === 'cancel' || res === 'escape key press' || res === 'backdrop click')) {
-                    throw res;
-                }
+
+            modalInstance.result.then(function (selectedItem) {
+                $scope.selected = selectedItem;
+            }, function () {
+                console.log('Modal dismissed at: ' + new Date());
             });
-        }
+
+
+        };
 
 
     });
