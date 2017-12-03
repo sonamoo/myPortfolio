@@ -265,12 +265,19 @@ portfolioApp.controller('mainController',
             }
         };
 
-        $scope.projectClickedHandler = function() {
+        $scope.projectClickedHandler = function(p) {
             var modalInstance = $uibModal.open(
                 {
                     templateUrl: './project-modal.html',
-                    controller: 'mainController',
-                    size: 'md'
+                    controller: 'modalController',
+                    size: 'md',
+
+                    resolve: {
+                        prj: function() {
+                            return p;
+                        }
+                    }
+
                 });
 
 
