@@ -1,0 +1,32 @@
+#modal-description {
+    font-family: sans-serif;
+    min-height: 500px;
+    font-size: 16px;
+}
+
+.modal-tech {
+    font-size: 14px;
+    color: #6e6ed4;
+    padding-right: 15px;
+}
+
+.a-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    top: 50%;
+    margin: 5px auto;
+    font: bold 13px Arial;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    padding: 2px 6px 2px 6px;
+    border: 1px solid white;
+}
+
+.a-button:hover {
+    background-color: #3d9970;
+    color: #070730;
+}

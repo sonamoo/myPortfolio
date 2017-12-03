@@ -1,12 +1,19 @@
+<div class="modal-wrapper">
+    <div class="modal-header">
+        <h3 class="modal-title">{{project.name}}</h3>
+        <span class="modal-tech" ng-repeat="t in project.tech">{{t}}</span>
+    </div>
+    <div class="modal-body" id="modal-description">
+        <h4>Project Summary</h4>
+        <p>{{project.description}}</p>
 
-
-<div class="modal-header">
-    <h3 class="modal-title">{{languages[0].lang}} {{project.name}}sadfdsafsdfasdsfaasdfs</h3>
-</div>
-<div class="modal-body">
-    {{project["name"]}}
-</div>
-<div class="modal-footer">
-    <button class="btn btn-primary" type="button">OK</button>
-    <button class="btn btn-warning" type="button">Cancel</button>
+        <h4>What I did</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet ipsum vitae tellus molestie sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum et condimentum lectus. Morbi ultrices ac sem vitae faucibus. Sed ac malesuada nulla. Nullam eu eros risus. Mauris euismod sit amet odio a condimentum. Nulla hendrerit augue metus, nec mattis nisl mattis eu. Vestibulum in massa eros. Sed tempor, sem sit amet pretium feugiat, ipsum dolor placerat libero, non vestibulum lorem leo eu ligula. Morbi justo eros, pretium sed nisi sed, commodo ultrices ipsum.</p>
+        <a href="#" class="a-button">SEE THE PROJECT</a>
+        <a href="#" class="a-button">SEE THE CODE ON GITHUB</a>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button">OK</button>
+        <button class="btn btn-warning" type="button">Cancel</button>
+    </div>
 </div>
