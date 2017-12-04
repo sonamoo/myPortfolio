@@ -4,7 +4,6 @@ body{
 }
 
 a {
-    text-decoration: none;
     color: black;
 }
 
@@ -20,13 +19,18 @@ a {
 #header-wrapper {
     position: fixed;
     top: 0;
+
     z-index: 10;
     width: 100%;
     padding-top: 30px;
+    background-color: #101065;
     font-size: 15px;
     min-height: 30px;
-    background-color: white;
     border-bottom: black solid 1px;
+}
+
+#header-wrapper a {
+    color: white;
 }
 
 #header-contents-wrapper {
@@ -89,13 +93,23 @@ a {
 }
 
 .filter-contents {
-
+    color: #4366a9;
     font-size: 15px;
+    font-family: sans-serif;
     margin-right: 25px;
-    /*
-    This is for the later use.
-     cursor:pointer;
-     */
+    cursor:pointer;
+    border: 2px solid #4366a9;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.filter-contents:hover {
+    color:white;
+    background-color:#3d9970;
+}
+
+.filter-row {
+    margin-bottom:10px;
 }
 
 #project-filter-wrapper {
@@ -104,7 +118,8 @@ a {
 }
 
 .active-filter {
-    color: red;
+    color: black;
+    background-color: #3d9970;
 }
 
 .proj-link-tag {

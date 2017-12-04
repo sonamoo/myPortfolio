@@ -40,6 +40,14 @@ portfolioApp.controller('mainController',
                 "img": "src/pickavibe.png",
                 "tech": ["Javascript", "AngularJS","NodeJS", "Web"],
                 "event": ["DemonHacks"],
+                "team": ["Javier Gonzalez", "Jun Lee", "Raul Telbisz", "Seho Lim(Me)"],
+                "team_links": {
+                    "Javier Gonzalez": "https://www.linkedin.com/in/ericlimchicago/",
+                    "Jun Lee": "https://www.linkedin.com/in/ericlimchicago/",
+                    "Raul Telbisz": "https://www.linkedin.com/in/ericlimchicago/",
+                    "Seho Lim" : "https://www.linkedin.com/in/ericlimchicago/"
+                },
+                "job_description": "During the hackathon, I built the server with NodeJS and Express to interact with the Clearfai API and Bing Image Search API. I also worked on some Angularjs that interact with API calls.",
                 "links": {
                     "github": "https://github.com/sonamoo/pic-a-vibe",
                     "proj": "https://obscure-falls-61182.herokuapp.com/"
@@ -53,6 +61,14 @@ portfolioApp.controller('mainController',
                 "img": "src/collegecookie.png",
                 "tech": ["Python", "Flask", "Web"],
                 "event": ["WildHacks"],
+                "team": ["Elona Selenica", "Jennifer Nguyen", "Jorge Barrios", "Seho Lim(Me)"],
+                "team_links": {
+                    "Elona Selenica": "https://www.linkedin.com/in/ericlimchicago/",
+                    "Jennifer Nguyen": "https://www.linkedin.com/in/ericlimchicago/",
+                    "Jorge Barrios": "https://www.linkedin.com/in/ericlimchicago/",
+                    "Seho Lim" : "https://www.linkedin.com/in/ericlimchicago/"
+                },
+                "job_description": "I taught the basic of git, github, python, javascript and how the web technology such as html, css, Ajax call, and database work. I designed the server, database schema and an algorithm that find overlapping lunch schedule. I also worked on the front-end code that displays the users that are available for lunch.",
                 "links": {
                     "github": "https://github.com/sonamoo/don-tEatLunchAlone",
                     "proj": "https://devpost.com/software/college-cookie"
@@ -66,6 +82,7 @@ portfolioApp.controller('mainController',
                 "img": "src/artsyplacesfinder.png",
                 "tech": ["Javascript","KnockoutJS", "Web"],
                 "event": [],
+                "job_description": "I built the Single Page Application using knockoutJS, Google Map API and Foursquare API.",
                 "links": {
                     "github": "https://github.com/sonamoo/artsyPlacesFinder",
                     "proj": "https://sonamoo.github.io/artsyPlacesFinder/"
@@ -79,6 +96,7 @@ portfolioApp.controller('mainController',
                 "img": "src/collectiveflashcard.png",
                 "tech": ["Javascript", "Python","Flask", "Web"],
                 "event": [],
+                "job_description": "I built Full-Stack Web app from scratch using Python Flask, Jinja Template, and PostgreSQL to build relational database. Google Login API is used for user identification and authorization. This app is deployed in AWS as EC2 ubuntu instance using Apache server.",
                 "links": {
                     "github": "https://github.com/sonamoo/FlashcardAppUbuntu",
                     "proj": "http://ec2-13-59-188-21.us-east-2.compute.amazonaws.com/"
@@ -92,9 +110,10 @@ portfolioApp.controller('mainController',
                 "img": "src/loganalysis.png",
                 "tech": ["Python", "DB-API", "Data-Analysis"],
                 "event": [],
+                "job_description": "I built the python program that pulls of the data from the PostgreSQL database and analyse information. I wrote SQL in order to create join tables, and pull off the certain data.",
                 "links": {
-                    "github": "https://github.com/sonamoo/pic-a-vibe",
-                    "proj": "https://obscure-falls-61182.herokuapp.com/"
+                    "github": "https://github.com/sonamoo/logAnalysis",
+                    "proj": ""
                 }
             },
 
@@ -105,9 +124,10 @@ portfolioApp.controller('mainController',
                 "img": "src/aresautomation.png",
                 "tech": ["Web"],
                 "event": [],
+                "job_description": "I created this static website for my client. I designed the website and made the website responsive.",
                 "links": {
-                    "github": "https://github.com/sonamoo/pic-a-vibe",
-                    "proj": "https://obscure-falls-61182.herokuapp.com/"
+                    "github": "",
+                    "proj": "http://aresautomation.com/"
                 }
             }
         ];

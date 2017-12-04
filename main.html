@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Seho Lim</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Orbitron:700|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300|Lato|Orbitron:700|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/ui-bootstrap-csp.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/modal.css">
@@ -16,7 +16,6 @@
     <script src="js/angular.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
     <script src="js/angular-touch.min.js"></script>
-
 
     <script src="js/ui-bootstrap.js"></script>
 
@@ -30,11 +29,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div id="header-contents-wrapper">
-                        <span class="header-contents">About</span>
-                        <span class="header-contents">Projects</span>
-                        <span class="header-contents">Experience</span>
-                        <span class="header-contents">Resume</span>
-                        <span class="header-contents">Contact</span>
+                        <a href="profile.html" class="header-contents">About</a>
+                        <a class="header-contents">Projects</a>
+                        <a class="header-contents">Experience</a>
+                        <a class="header-contents">Resume</a>
+                        <a class="header-contents">Contact</a>
                     </div>
                 </div>
             </div>
@@ -47,15 +46,15 @@
             </div>
 
             <!---------------------------------Projects Filter-------------------------------->
-            <div class="row">
+            <div class="row filter-row">
                 <div class="col-md-3">Languages & Tools</div>
                 <div class="col-md-9"><span class="filter-contents" data-ng-repeat="a in languages" ng-click="langFilter(a.lang, $index); searchProjectsByKeywords()" ng-class="{'active-filter': languages[$index].filter}" >{{a.lang}}</span></div>
             </div>
-            <div class="row">
+            <div class="row filter-row">
                 <div class="col-md-3">Types</div>
                 <div class="col-md-9"><span class="filter-contents" data-ng-repeat="t in types" ng-click="typeFilter(t.type, $index); searchProjectsByKeywords()" ng-class="{'active-filter': types[$index].filter}">{{t.type}}</span></div>
             </div>
-            <div class="row">
+            <div class="row filter-row">
                 <div class="col-md-3">Events</div>
                 <div class="col-md-9"><span class="filter-contents" data-ng-repeat="e in events" ng-click="eventFilter(e.event, $index); searchProjectsByKeywords()" ng-class="{'active-filter': events[$index].filter}">{{e.event}}</span></div>
             </div>
