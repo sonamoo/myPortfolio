@@ -7,6 +7,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a, a:hover, a:link, a:visited, a:active {
+    color: #3d9970;
+    text-decoration: none;
+
+}
 .about-wrapper {
     max-width: 600px;
     margin: 0 auto;
@@ -15,4 +20,30 @@ body {
     font-family: sans-serif;
     font-weight: lighter;
     font-size: 17px;
+}
+
+.a-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    top: 50%;
+    color: white;
+    margin: 5px auto;
+    font: bold 13px Arial;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    padding: 2px 6px 2px 6px;
+    border: 1px solid white;
+}
+
+.a-button:hover {
+    background-color: #3d9970;
+    color: #070730;
+}
+
+.about-buttons-wrapper {
+    margin-top: 50px;
 }
