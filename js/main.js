@@ -165,11 +165,6 @@ portfolioApp.controller('mainController',
                 $scope.types[index].filter = false;
                 $scope.filterObj["types"].splice(idx, 1);
             }
-            console.log("-----------------filter-------------");
-            console.log($scope.filterObj["langs"]);
-            console.log($scope.filterObj["types"]);
-            console.log($scope.filterObj["events"]);
-
         };
 
         $scope.eventFilter = function(e, index) {
@@ -185,10 +180,6 @@ portfolioApp.controller('mainController',
                 $scope.events[index].filter = false;
                 $scope.filterObj["events"].splice(idx, 1);
             }
-            console.log("-----------------filter-------------");
-            console.log($scope.filterObj["langs"]);
-            console.log($scope.filterObj["types"]);
-            console.log($scope.filterObj["events"]);
         };
 
         $scope.is_hackathon = function(p) {
@@ -306,14 +297,5 @@ portfolioApp.controller('mainController',
             }, function () {
                 console.log('Modal dismissed at: ' + new Date());
             });
-
-
         };
-
-
     });
-
-var see_project = function() {
-    console.log();
-    console.log("sdf");
-};
