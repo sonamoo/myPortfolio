@@ -1,6 +1,9 @@
 {
   "name": "portfolios",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.11.5"
+  },
   "description": "my personal portfolio website.",
   "main": "index.js",
   "dependencies": {
