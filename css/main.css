@@ -207,8 +207,16 @@ a {
     }
 
     .header-contents {
-        margin-right: 10px;
-        font-size: 14px;
+        margin-right: 5px;
+        font-size: 13px;
+    }
+
+    #header-contents-wrapper {
+        width: 100%;
+    }
+    
+    #header-wrapper {
+        position: relative;
     }
 
 
