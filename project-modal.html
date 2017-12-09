@@ -6,7 +6,7 @@
     <div class="modal-body" id="modal-description">
         <h4 class="modal-contents-header" ng-show="project.event[0]">Team</h4>
         <p>
-        <a class="team-members" ng-repeat="(key, value) in project.team_links" href="{{value}}">{{key}}</a>
+        <a class="team-members" ng-repeat="(key, value) in project.team_links" href="{{value}}" target="_blank">{{key}}</a>
         </p>
         <h4 class="modal-contents-header">Project Summary</h4>
         <p>{{project.description}}</p>
