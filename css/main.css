@@ -209,7 +209,7 @@ a {
     .header-contents {
         margin-right: 3px;
         font-size: 13px;
-        padding: 6px;
+        padding: 7px;
     }
 
     #header-contents-wrapper {
@@ -218,6 +218,8 @@ a {
     
     #header-wrapper {
         position: relative;
+        height: 40px;
+
     }
 
 
