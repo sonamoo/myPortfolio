@@ -40,12 +40,13 @@ portfolioApp.controller('mainController',
                 "img": "src/pickavibe.png",
                 "tech": ["Javascript", "AngularJS","NodeJS", "Web"],
                 "event": ["DemonHacks"],
-                "team": ["Javier Gonzalez", "Jun Lee", "Raul Telbisz", "Seho Lim(Me)"],
+                "team": ["Javier Gonzalez", "Jun Lee", "Seho Lim(Me)", "Raul Telbisz" ],
                 "team_links": {
-                    "Javier Gonzalez": "https://www.linkedin.com/in/ericlimchicago/",
-                    "Jun Lee": "https://www.linkedin.com/in/ericlimchicago/",
-                    "Raul Telbisz": "https://www.linkedin.com/in/ericlimchicago/",
-                    "Seho Lim" : "https://www.linkedin.com/in/ericlimchicago/"
+                    "Javier Gonzalez": "#",
+                    "Jun Lee": "https://www.linkedin.com/in/junlee91/",
+                    "Seho Lim" : "https://www.linkedin.com/in/ericlimchicago/",
+                    "Raul Telbisz": "https://www.linkedin.com/in/raul-telbisz/"
+
                 },
                 "job_description": "During the hackathon, I built the server with NodeJS and Express to interact with the Clearfai API and Bing Image Search API. I also worked on some Angularjs that interact with API calls.",
                 "links": {
@@ -61,12 +62,12 @@ portfolioApp.controller('mainController',
                 "img": "src/collegeCookie.png",
                 "tech": ["Python", "Flask", "Web"],
                 "event": ["WildHacks"],
-                "team": ["Elona Selenica", "Jennifer Nguyen", "Jorge Barrios", "Seho Lim(Me)"],
+                "team": ["Jorge Barrios", "Seho Lim(Me)", "Jennifer Nguyen", "Elona Selenica"],
                 "team_links": {
-                    "Elona Selenica": "https://www.linkedin.com/in/ericlimchicago/",
-                    "Jennifer Nguyen": "https://www.linkedin.com/in/ericlimchicago/",
-                    "Jorge Barrios": "https://www.linkedin.com/in/ericlimchicago/",
-                    "Seho Lim" : "https://www.linkedin.com/in/ericlimchicago/"
+                    "Jorge Barrios": "https://www.linkedin.com/in/jorge-barrios/",
+                    "Seho Lim" : "https://www.linkedin.com/in/ericlimchicago/",
+                    "Jennifer Nguyen": "https://www.linkedin.com/in/jennifer-nguyen-607b71126/",
+                    "Elona Selenica": "https://www.linkedin.com/in/elona-selenica-b787a114a/"
                 },
                 "job_description": "I taught the basic of git, github, python, javascript and how the web technology such as html, css, Ajax call, and database work. I designed the server, database schema and an algorithm that find overlapping lunch schedule. I also worked on the front-end code that displays the users that are available for lunch.",
                 "links": {
