@@ -49,6 +49,9 @@ a, a:hover, a:link, a:visited, a:active {
     color: white;
 }
 
+.a-botton:link {
+    color:white
+}
 
 .about-buttons-wrapper {
     margin-top: 50px;
