@@ -200,16 +200,24 @@ a {
 
 
 @media screen and (max-width: 480px) {
+
     .filter-contents {
         font-size: 13px;
         margin-right: 7px;
         padding: 3px;
+        margin-bottom: 5px;
     }
 
     .header-contents {
         margin-right: 3px;
+        margin-bottom: 5px;
         font-size: 13px;
+
         padding: 7px;
+    }
+
+    #section-main {
+        margin-top: 40px;
     }
 
     #header-contents-wrapper {
