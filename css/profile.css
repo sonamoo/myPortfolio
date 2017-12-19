@@ -18,6 +18,7 @@ body {
 
 #profile-hello {
     font-family: 'Raleway', sans-serif;
+    line-height: 25px;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -78,6 +79,10 @@ body {
 .profile-wrapper {
     max-width: 90%;
     margin: 0 auto;
+}
+
+.makeitbold {
+    color:#3d9970;
 }
 
 
