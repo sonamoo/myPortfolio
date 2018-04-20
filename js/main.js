@@ -16,7 +16,8 @@ portfolioApp.controller('mainController',
                 {"lang_id": 3, "lang": "Flask", "filter": false},
                 {"lang_id": 4, "lang": "AngularJS", "filter": false},
                 {"lang_id": 5, "lang": "NodeJS", "filter": false},
-                {"lang_id": 6, "lang": "KnockoutJS", "filter": false}
+                {"lang_id": 6, "lang": "KnockoutJS", "filter": false},
+                {"lang_id": 7, "lang": "ReactJS", "filter": false}
             ];
         $scope.types= [
             {"type_id": 0, "type": "Web", "filter": false},
@@ -33,8 +34,31 @@ portfolioApp.controller('mainController',
             "events": []
         };
         const projects = [
-            {
+        {
                 "id":0,
+                "name": "SmartCards",
+                "description": "This React Native mobile app translates the user's text input into the language that the user wants to learn. It helps user learning new vocabulary fast by showing the image of the text.",
+                "img": "src/smartcard.png",
+                "tech": ["Javascript", "Python","Flask", "ReactJS"],
+                "event": ["DemonHacks"],
+                "team": ["Alan Jin", "Anas Tlemet", "Hassan Murtaza", "Jun Lee", "Seho Lim(Me)", "Zhiwei Zhang"],
+                "team_links": {
+                    "Alan Jin": "https://www.linkedin.com/in/alanxjin/",
+                    "Jun Lee": "https://www.linkedin.com/in/junlee91/",
+                    "Anas Tlemet": "https://www.linkedin.com/in/anas-tlemat/"
+                    "Seho Lim" : "https://www.linkedin.com/in/ericlimchicago/",
+                    "Hassan Murtaza": "https://www.linkedin.com/in/hmurtaza/"
+
+                },
+                "job_description": "During the hackathon, I built the server with Flask. Created router and handlers to process the http requests. The server also interact with Bing Image Search API and Google Translate API",
+                "links": {
+                    "github": "https://github.com/junlee91/react-native-flash-card",
+                    "proj": ""
+                }
+            },
+
+            {
+                "id":1,
                 "name": "Pic-A-Vibe",
                 "description": "This web app won 3rd coolest prize at Demonhacks from Capital One. This app let users search image and provide sounds of the objects that are present in the photo. I created the server with NodeJS/Express and worked on some Javascript that work with api calls.",
                 "img": "src/pickavibe.png",
@@ -56,7 +80,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":1,
+                "id":2,
                 "name": "College Cookie",
                 "description": "Social app created during Wildhacks in 36hrs. This app help students to eat lunch together by introducing people who have similar lunch time. Twillio's text messaging API is used to let users to contact other students.",
                 "img": "src/collegeCookie.png",
@@ -77,7 +101,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":2,
+                "id":3,
                 "name": "Artsy Places Finder",
                 "description": "This web-app finds 15 Foursquare's recommended places in art category near the input address. Users can search any place with help of Google's address auto complete API and Google Map API to browse any art related venues such as museums, galleries, and theaters, etc.",
                 "img": "src/artsyplacesfinder.png",
@@ -91,7 +115,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":3,
+                "id":4,
                 "name": "Collective Flashcard",
                 "description": "This Flask application helps people to create collective flashcards and learn things efficiently. Users can create courses and participate in creating more flashcards to every courses. Google Login API is used for registering and login.",
                 "img": "src/collectiveflashcard.png",
@@ -105,7 +129,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":4,
+                "id":5,
                 "name": "Log Analysis",
                 "description": "This python DB-API analyses large database with over a million rows. API analyses the top three most viewed articles four authors, and the day that ad more than 1 % of HTTP request errors.",
                 "img": "src/loganalysis.png",
@@ -119,7 +143,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":5,
+                "id":6,
                 "name": "Ares Automation",
                 "description": "I created this static website for my local client who is a sales representative for industrial machinery.",
                 "img": "src/aresautomation.png",
