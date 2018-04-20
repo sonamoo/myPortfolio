@@ -159,6 +159,8 @@ portfolioApp.controller('mainController',
             }
         ];
 
+        console.log(projects);
+
         $scope.langFilter = function(a, index){
             console.log(index);
             console.log("Clicked " + a);
