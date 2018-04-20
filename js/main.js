@@ -55,7 +55,7 @@ portfolioApp.controller('mainController',
                 "job_description": "During the hackathon, I built the server with Flask. Created router and handlers to process the http requests. The server also interact with Bing Image Search API and Google Translate API",
                 "links": {
                     "github": "https://github.com/junlee91/react-native-flash-card",
-                    "proj": ""
+                    "proj": "https://devpost.com/software/smartcards"
                 }
             },
 
