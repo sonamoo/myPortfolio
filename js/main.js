@@ -47,7 +47,7 @@ portfolioApp.controller('mainController',
                 "team_links": {
                     "Alan Jin": "https://www.linkedin.com/in/alanxjin/",
                     "Jun Lee": "https://www.linkedin.com/in/junlee91/",
-                    "Anas Tlemet": "https://www.linkedin.com/in/anas-tlemat/"
+                    "Anas Tlemet": "https://www.linkedin.com/in/anas-tlemat/",
                     "Seho Lim" : "https://www.linkedin.com/in/ericlimchicago/",
                     "Hassan Murtaza": "https://www.linkedin.com/in/hmurtaza/"
 
