@@ -26,7 +26,9 @@ portfolioApp.controller('mainController',
         ];
         $scope.events = [
             {"event_id": 0, "event": "DemonHacks", "filter": false},
-            {"event_id": 1, "event": "WildHacks", "filter": false}
+            {"event_id": 1, "event": "WildHacks", "filter": false},
+            {"event_id": 2, "event": "HackIllinois", "filter": false},
+
         ];
         $scope.filterObj = {
             "langs" : [],
@@ -40,7 +42,7 @@ portfolioApp.controller('mainController',
                 "description": "This React Native mobile app translates the user's text input into the language that the user wants to learn. It helps user learning new vocabulary fast by showing the image of the text.",
                 "img": "src/smartcard.png",
                 "tech": ["Javascript", "Python","Flask", "ReactJS"],
-                "event": ["DemonHacks"],
+                "event": ["HackIllinois"],
                 "team": ["Alan Jin", "Anas Tlemet", "Hassan Murtaza", "Jun Lee", "Seho Lim(Me)", "Zhiwei Zhang"],
                 "team_links": {
                     "Alan Jin": "https://www.linkedin.com/in/alanxjin/",
