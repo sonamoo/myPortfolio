@@ -353,6 +353,7 @@ portfolioApp.controller('mainController',
                         console.log($scope.filterObj.langs[l]);
 
                     }
+                }
 
                 var prjTypeLength = project["type"].length;
                 for(var j = 0; j < prjTypeLength; j++) {
@@ -365,10 +366,19 @@ portfolioApp.controller('mainController',
                     }
                 }
 
-
-
+                var prjEventLength = project["event"].length;
+                for(var j = 0; j < prjEventLength; j++) {
+                    for(var l=0; l < $scope.filterObj.events.length; l++){
+                        if(project.event[j] === $scope.filterObj.events[l]) {
+                            pushProject(projects[i]);
+                            break;
+                        }
+                        console.log($scope.filterObj.langs[l]);
+                    }
+                }
 
             }
+        }
 
 
         $scope.projectClickedHandler = function(p) {
