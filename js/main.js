@@ -8,7 +8,7 @@ portfolioApp.controller('mainController',
             "firstName" : "Seho",
             "lastName" : "Lim"
         };
-        const langs = [];
+        let langs = [];
         $scope.languages =
             [
                 {"lang_id": 0, "lang": "Python", "filter": false},
@@ -17,7 +17,8 @@ portfolioApp.controller('mainController',
                 {"lang_id": 4, "lang": "AngularJS", "filter": false},
                 {"lang_id": 5, "lang": "NodeJS", "filter": false},
                 {"lang_id": 6, "lang": "KnockoutJS", "filter": false},
-                {"lang_id": 7, "lang": "ReactJS", "filter": false}
+                {"lang_id": 7, "lang": "ReactJS", "filter": false},
+                {"lang_id": 8, "lang": "React Native", "filter": false}
             ];
         $scope.types= [
             {"type_id": 0, "type": "Web", "filter": false},
@@ -37,8 +38,27 @@ portfolioApp.controller('mainController',
             "events": []
         };
         const projects = [
-        {
+            {
                 "id":0,
+                "name": "CareerTalk",
+                "description": "This app is currently available in App Store and Google Play. This iOS and Android app help job seekers navigating career fairs.",
+                "img": "src/splash.png",
+                "lang": ["Javascript", "Python","Flask", "ReactJS", "React Native"],
+                "type": ["Mobile"],
+                "event": [],
+                "team": ["Jun Lee", "Seho Lim"],
+                "team_links": {
+                    "Jun Lee": "https://www.linkedin.com/in/junlee91/",
+                    "Seho Lim" : "https://www.linkedin.com/in/ericlimchicago/"
+                },
+                "job_description": "I create RESTfulAPI to provide career fairs and companies data, and deployed the database on AWS. I am also in charge of react native UI development.",
+                "links": {
+                    "github": "https://github.com/CreativeSolutionLabs/CareerTalk",
+                    "proj": "https://itunes.apple.com/us/app/careertalk-find-your-jobs/id1435448112?mt=8CareerTalk"
+                }
+            },
+            {
+                "id":1,
                 "name": "SmartCards",
                 "description": "This React Native mobile app translates the user's text input into the language that the user wants to learn. It helps user learning new vocabulary fast by showing the image of the text.",
                 "img": "src/smartcard.png",
@@ -62,7 +82,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":1,
+                "id":2,
                 "name": "Pic-A-Vibe",
                 "description": "This web app won 3rd coolest prize at Demonhacks from Capital One. This app let users search image and provide sounds of the objects that are present in the photo. I created the server with NodeJS/Express and worked on some Javascript that work with api calls.",
                 "img": "src/pickavibe.png",
@@ -85,7 +105,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":2,
+                "id":3,
                 "name": "College Cookie",
                 "description": "Social app created during Wildhacks in 36hrs. This app help students to eat lunch together by introducing people who have similar lunch time. Twillio's text messaging API is used to let users to contact other students.",
                 "img": "src/collegeCookie.png",
@@ -107,7 +127,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":3,
+                "id":4,
                 "name": "Artsy Places Finder",
                 "description": "This web-app finds 15 Foursquare's recommended places in art category near the input address. Users can search any place with help of Google's address auto complete API and Google Map API to browse any art related venues such as museums, galleries, and theaters, etc.",
                 "img": "src/artsyplacesfinder.png",
@@ -122,7 +142,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":4,
+                "id":5,
                 "name": "Collective Flashcard",
                 "description": "This Flask application helps people to create collective flashcards and learn things efficiently. Users can create courses and participate in creating more flashcards to every courses. Google Login API is used for registering and login.",
                 "img": "src/collectiveflashcard.png",
@@ -137,7 +157,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":5,
+                "id":6,
                 "name": "Log Analysis",
                 "description": "This python DB-API analyses large database with over a million rows. API analyses the top three most viewed articles four authors, and the day that ad more than 1 % of HTTP request errors.",
                 "img": "src/loganalysis.png",
@@ -152,7 +172,7 @@ portfolioApp.controller('mainController',
             },
 
             {
-                "id":6,
+                "id":7,
                 "name": "Ares Automation",
                 "description": "I created this static website for my local client who is a sales representative for industrial machinery.",
                 "img": "src/aresautomation.png",
@@ -167,8 +187,6 @@ portfolioApp.controller('mainController',
             }
         ];
 
-        console.log(projects);
-
         $scope.langFilter = function(a, index){
             console.log(index);
             console.log("Clicked " + a);
@@ -181,11 +199,6 @@ portfolioApp.controller('mainController',
                 $scope.languages[index].filter = false;
                 $scope.filterObj["langs"].splice(idx, 1);
             }
-            console.log("-----------------filter-------------");
-            console.log($scope.filterObj["langs"]);
-            console.log($scope.filterObj["types"]);
-            console.log($scope.filterObj["events"]);
-
         };
 
 
@@ -202,16 +215,10 @@ portfolioApp.controller('mainController',
                 $scope.types[index].filter = false;
                 $scope.filterObj["types"].splice(idx, 1);
             }
-            console.log("-----------------filter-------------");
-            console.log($scope.filterObj["langs"]);
-            console.log($scope.filterObj["types"]);
-            console.log($scope.filterObj["events"]);
         };
 
         $scope.eventFilter = function(e, index) {
-            console.log(index);
-            console.log("Clicked " + e);
-
+            
             if($scope.filterObj["events"].indexOf(e) === -1) {
                 $scope.filterObj["events"].push(e);
                 $scope.events[index].filter = true;
@@ -221,10 +228,6 @@ portfolioApp.controller('mainController',
                 $scope.events[index].filter = false;
                 $scope.filterObj["events"].splice(idx, 1);
             }
-            console.log("-----------------filter-------------");
-            console.log($scope.filterObj["langs"]);
-            console.log($scope.filterObj["types"]);
-            console.log($scope.filterObj["events"]);
         };
 
         $scope.is_hackathon = function(p) {
@@ -245,9 +248,10 @@ portfolioApp.controller('mainController',
         $scope.filteredProjects.filtered = projects;
 
         $scope.toggleFiltering = function() {
-
+            console.log('toggle filtering');
             if ($scope.filteredProjects.isUserFiltering === true) {
                 $scope.filteredProjects.isUserFiltering = false;
+
             } else {
                 $scope.filteredProjects.isUserFiltering = true;
             }
@@ -269,68 +273,11 @@ portfolioApp.controller('mainController',
                 }
 
             }
-            console.log("Push the project");
             $scope.filteredProjects.filtered.push(p);
         };
 
-/*
+
         $scope.searchProjectsByKeywords = function() {
-            console.log("searching start");
-            if ($scope.filteredProjects.isUserFiltering === false) {
-                return 0;
-            }
-            // empty the project.
-            $scope.filteredProjects.filtered = [];
-            var numOfProjects = projects.length;
-            var numOfTechs = 0;
-            for(var i = 0; i < numOfProjects; i++) {
-                
-                var project = projects[i];
-                for(var j = 0; j < numOfTechs; j++) {
-
-                    var numOfLangs = $scope.filterObj.langs.length;
-                    var numOfTypes = $scope.filterObj.types.length;
-                    var numOfEvents = $scope.filterObj.events.length;
-
-                    //loop through langs
-                    for(var l = 0; l < numOfLangs; l++) {
-                        if(project.tech[j] === $scope.filterObj.langs[l]) {
-                            pushProject(projects[i]);
-                        }
-                        console.log($scope.filterObj.langs[l]);
-                    }
-                    //loop through types
-                    for(var t = 0; t < numOfTypes; t++) {
-                        if(project.types[j] === $scope.filterObj.types[t]) {
-                            pushProject(projects[i]);
-                        }
-                        console.log($scope.filterObj.types[t]);
-                    }
-                    //loop through events
-                    
-                }
-
-                numOfEvents = projects[i].event.length;
-                for(var e = 0; e < numOfEvents; e++) {
-                    if(project.event[e] === $scope.filterObj.events[e]) {
-                        pushProject(projects[i]);
-                    }
-                    console.log($scope.filterObj.events[e]);
-                }
-            
-
-            }
-
-            console.log($scope.filteredProjects.filtered.length);
-            if ($scope.filteredProjects.filtered.length === 0) {
-                $scope.filteredProjects.filtered = projects;
-                console.log("sdfsdfasdf")
-            }
-        };
-
-*/
-        $scope.searchProjectsByKeywords = function() {
-            console.log("searching start");
             if ($scope.filteredProjects.isUserFiltering === false) {
                 return 0;
             }
