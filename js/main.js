@@ -187,59 +187,6 @@ portfolioApp.controller('mainController',
             }
         ];
 
-        $scope.langFilter = function(a, index){
-            console.log(index);
-            console.log("Clicked " + a);
-            if($scope.filterObj["langs"].indexOf(a) === -1) {
-                $scope.filterObj["langs"].push(a);
-                $scope.languages[index].filter = true;
-            }
-            else {
-                var idx = $scope.filterObj["langs"].indexOf(a);
-                $scope.languages[index].filter = false;
-                $scope.filterObj["langs"].splice(idx, 1);
-            }
-        };
-
-
-        $scope.typeFilter = function(t, index) {
-            console.log(index);
-            console.log("Clicked " + t);
-
-            if($scope.filterObj["types"].indexOf(t) === -1) {
-                $scope.filterObj["types"].push(t);
-                $scope.types[index].filter = true;
-            }
-            else {
-                var idx = $scope.filterObj["types"].indexOf(t);
-                $scope.types[index].filter = false;
-                $scope.filterObj["types"].splice(idx, 1);
-            }
-        };
-
-        $scope.eventFilter = function(e, index) {
-            
-            if($scope.filterObj["events"].indexOf(e) === -1) {
-                $scope.filterObj["events"].push(e);
-                $scope.events[index].filter = true;
-            }
-            else {
-                var idx = $scope.filterObj["events"].indexOf(e);
-                $scope.events[index].filter = false;
-                $scope.filterObj["events"].splice(idx, 1);
-            }
-        };
-
-        $scope.is_hackathon = function(p) {
-            console.log(p);
-        };
-
-        $scope.mouseOverOnProj = false;
-        $scope.see_project = function(p) {
-            console.log(p);
-            $scope.mouseOverOnProj = true;
-        };
-
         $scope.filteredProjects = {
             "filtered": [],
             "isUserFiltering": true
@@ -247,8 +194,83 @@ portfolioApp.controller('mainController',
 
         $scope.filteredProjects.filtered = projects;
 
+        function isUserFiltering() {
+            if($scope.filterObj["langs"].length === 0 
+                && $scope.filterObj["types"].length === 0
+                && $scope.filterObj["events"].length === 0) {
+                // console.log('hi1');
+                $scope.filteredProjects.isUserFiltering = false;
+                $scope.filteredProjects.filtered.push(projects[1]);
+            }
+        }
+
+
+        $scope.langFilter = function(a, index){
+            // console.log(index);
+            // console.log("Clicked " + a);
+            if($scope.filterObj["langs"].indexOf(a) === -1) {
+                $scope.filterObj["langs"].push(a);
+                $scope.filteredProjects.isUserFiltering = true;
+                $scope.languages[index].filter = true;
+            }
+            else {
+                var idx = $scope.filterObj["langs"].indexOf(a);
+                $scope.languages[index].filter = false;
+                $scope.filterObj["langs"].splice(idx, 1);
+            }
+
+            isUserFiltering();
+        };
+
+
+        $scope.typeFilter = function(t, index) {
+            // console.log(index);
+            // console.log("Clicked " + t);
+
+            if($scope.filterObj["types"].indexOf(t) === -1) {
+                $scope.filterObj["types"].push(t);
+                $scope.filteredProjects.isUserFiltering = true;
+                $scope.types[index].filter = true;
+            }
+            else {
+                var idx = $scope.filterObj["types"].indexOf(t);
+                $scope.types[index].filter = false;
+                $scope.filterObj["types"].splice(idx, 1);
+            }
+
+            isUserFiltering();
+        };
+
+        $scope.eventFilter = function(e, index) {
+            
+            if($scope.filterObj["events"].indexOf(e) === -1) {
+                $scope.filterObj["events"].push(e);
+                $scope.events[index].filter = true;
+                $scope.filteredProjects.isUserFiltering = true;
+            }
+            else {
+                var idx = $scope.filterObj["events"].indexOf(e);
+                $scope.events[index].filter = false;
+                $scope.filterObj["events"].splice(idx, 1);
+            }
+
+            isUserFiltering();
+        };
+
+        $scope.is_hackathon = function(p) {
+            // console.log(p);
+        };
+
+        $scope.mouseOverOnProj = false;
+        $scope.see_project = function(p) {
+            // console.log(p);
+            $scope.mouseOverOnProj = true;
+        };
+
+        
+
         $scope.toggleFiltering = function() {
-            console.log('toggle filtering');
+            // console.log('toggle filtering');
             if ($scope.filteredProjects.isUserFiltering === true) {
                 $scope.filteredProjects.isUserFiltering = false;
 
@@ -258,17 +280,17 @@ portfolioApp.controller('mainController',
         };
 
         var pushProject = function(p) {
-            console.log(p);
+            // console.log(p);
             var lenOfFilteredProjects = $scope.filteredProjects.filtered.length;
             if (lenOfFilteredProjects === 0) {
-                console.log("Push the project");
+                // console.log("Push the project");
                 $scope.filteredProjects.filtered.push(p);
                 //$scope.$apply();
                 return;
             }
             for(var i=0; i < lenOfFilteredProjects; i++) {
                 if(p["id"] === $scope.filteredProjects.filtered[i].id) {
-                    console.log("There is already the same project");
+                    //console.log("There is already the same project");
                     return;
                 }
 
@@ -279,6 +301,8 @@ portfolioApp.controller('mainController',
 
         $scope.searchProjectsByKeywords = function() {
             if ($scope.filteredProjects.isUserFiltering === false) {
+                //console.log('user is not toggling');
+                $scope.filteredProjects.filtered = projects;
                 return 0;
             }
             // Empty the projects in the list.
@@ -297,7 +321,7 @@ portfolioApp.controller('mainController',
                         if(project.lang[j] === $scope.filterObj.langs[l]) {
                             pushProject(projects[i]);
                         }
-                        console.log($scope.filterObj.langs[l]);
+                        //console.log($scope.filterObj.langs[l]);
 
                     }
                 }
@@ -309,7 +333,7 @@ portfolioApp.controller('mainController',
                             pushProject(projects[i]);
                             break;
                         }
-                        console.log($scope.filterObj.langs[l]);
+                        //console.log($scope.filterObj.langs[l]);
                     }
                 }
 
@@ -320,7 +344,7 @@ portfolioApp.controller('mainController',
                             pushProject(projects[i]);
                             break;
                         }
-                        console.log($scope.filterObj.langs[l]);
+                        //console.log($scope.filterObj.langs[l]);
                     }
                 }
 
@@ -347,7 +371,7 @@ portfolioApp.controller('mainController',
             modalInstance.result.then(function (selectedItem) {
                 $scope.selected = selectedItem;
             }, function () {
-                console.log('Modal dismissed at: ' + new Date());
+                // console.log('Modal dismissed at: ' + new Date());
             });
         };
     });
